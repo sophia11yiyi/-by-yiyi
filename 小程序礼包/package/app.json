@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/exclusive/index",
+    "pages/activation/index",
+    "pages/mycode/index",
+    "pages/receive/index",
+    "pages/search/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#f55",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "礼包中心",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#f55",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "全部",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/all.png",
+        "selectedIconPath": "images/all_on.png"
+      },
+      {
+        "text": "独家",
+        "pagePath": "pages/exclusive/index",
+        "iconPath": "images/du.png",
+        "selectedIconPath": "images/du_on.png"
+      },
+      {
+        "text": "激活码",
+        "pagePath": "pages/activation/index",
+        "iconPath": "images/invite.png",
+        "selectedIconPath": "images/invite_on.png"
+      },
+      {
+        "text": "我的礼包",
+        "pagePath": "pages/mycode/index",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order_on.png"
+      }
+    ]
+  }
+}

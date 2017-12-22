@@ -1,0 +1,6 @@
+<import src="../common/template.wxml" />
+<view class="package_ctn">
+  <template is="mycode_list" data="{{packageLists}}" />
+  <text class="loadingTxt">{{loadingTxt}}</text>
+</view>
+<button hover-class="none" class="share" open-type="share" wx:if="{{canIUse}}"></button>

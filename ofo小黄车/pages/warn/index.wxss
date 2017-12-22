@@ -1,0 +1,94 @@
+/* pages/warn/index.wxss */
+
+.container {
+  font-size: 30rpx;
+}
+.choose{
+  padding:40rpx 0 40rpx 40rpx;
+  background-color: #fff;
+}
+.title {
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+}
+.group{
+  display: flex;
+   flex-wrap:wrap;
+}
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  font-size: 30rpx;
+}
+.checkbox{
+width: 50%;
+margin: 16rpx 0;
+}
+.photoMessage{
+  padding: 0 40rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.takePictures{
+	padding: 40rpx 10rpx 40rpx 50rpx;
+  padding-top: 60rpx;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.pictures{
+  width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  border: 2rpx dotted #555;
+  margin:0 100rpx;
+  text-align: center;
+  color: #888;
+  display: inline-block;
+  	vertical-align: top;
+}
+.plateNumber{
+  margin-top: 30rpx;
+}
+.plateNumber view{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+   padding: 0 40rpx;
+  margin-bottom: 4rpx;
+  background-color: #fff;
+}
+.plateNumber input{
+  height: 100%;
+  width: 70%;
+  vertical-align: middle;
+}
+.takePictures image{
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  overflow: visible;
+  margin:24rpx; 
+}
+.takePictures image .del{
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  display: block;
+}
+.submit{
+  width: 80%;
+  height: 80rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 50rpx;
+  line-height:80rpx;
+  text-align: center;
+  margin-top: 80rpx;
+}

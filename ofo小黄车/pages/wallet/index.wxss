@@ -1,0 +1,28 @@
+/* pages/wallet/index.wxss */
+.balance{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 80rpx 0 60rpx;
+  font-size: 28rpx;
+}
+.money{
+  padding: 30rpx 0;
+  font-size: 80rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.intro{
+  width: 160rpx;
+  height:40rpx;
+  text-align: center;
+  border: 2rpx solid #333;
+  border-radius: 50rpx;
+}
+.my-ticket{
+margin-bottom: 4rpx;
+}
+.cash-pledge{
+  margin-bottom: 40rpx;
+}

@@ -1,0 +1,22 @@
+<view class="container">
+  <image class="header-img" src="{{displaymusic?postData.music.coverImg:postData.headImgSrc}}"></image>
+  <image catchtap='onMusicTap' class="header-video" src="{{displaymusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
+  <view class="author-data">
+    <image class="author-img" src="{{postData.avatar}}"></image>
+    <text class="author-name">{{postData.author}}</text>
+    <text class="author-publish">发表于</text>
+    <text class="author-time">{{postData.dateTime}}</text>
+  </view>
+  <text class="detail-title">{{postData.title}}</text>
+  <view class="icon-images">
+    <image catchtap="collectionTab" wx:if="{{collected}}" class="icon1" src="/images/icon/collection.png"></image>
+    <image catchtap="collectionTab" wx:else="{{collected}}" src="/images/icon/collection-anti.png"></image>
+    <image  catchtap="shareTab" class="icon2" wx:if="{{shared}}" src="/images/icon/share.png"></image>
+    <image  catchtap="shareTab" class="icon2" wx:else="{{shared}}" src="/images/icon/share-anti.png"></image>
+      <view class="horizon"></view>
+  </view>
+  <view class="content-text">
+  <text class="text-list">1引言</text>
+  <text class="list-con">{{postData.detail}}</text>
+  </view>
+</view>

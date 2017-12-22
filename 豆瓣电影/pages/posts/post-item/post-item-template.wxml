@@ -1,0 +1,17 @@
+ <template name="postItem">
+  <view class="post-container">
+    <view class="author-day">
+      <image class="post-author" src='{{avatar}}'></image>
+      <text class='post-day'>{{date}}</text>
+    </view>
+    <text class="post-title">{{title}}{{idx}}</text>
+    <image class="post-image" src='{{imgSrc}}'></image>
+    <text class="post-text">{{ontent}}</text>
+    <view class="post-bottom">
+      <image src='{{bottom1}}' class="bottom-image"></image>
+      <text class='bottom-text'>{{reading}}</text>
+      <image class='bottom-image' src="{{bottom2}}"></image>
+      <text class='bottom-text'>{{collection}}</text>
+    </view>
+  </view>
+</template>

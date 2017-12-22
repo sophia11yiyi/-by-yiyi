@@ -1,0 +1,20 @@
+{
+  "pages": [
+      "pages/map/index",
+    "pages/billing/index",
+    "pages/scanresult/index",
+    "pages/charge/index",
+    "pages/warn/index",
+    "pages/wallet/index",
+    "pages/my/index",
+        "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fdec0d",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小黄车",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}

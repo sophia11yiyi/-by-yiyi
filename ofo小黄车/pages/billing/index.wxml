@@ -1,0 +1,16 @@
+<view class='container'>
+<view class='number '>
+<text>当前车牌号:{{number}}</text></view>
+<view class='time'>
+     <view class="time-title">
+            <text>{{billing}}</text>
+        </view>
+        <view class="time-content">
+            <text>{{hours}}:{{minuters}}:{{seconds}}</text>
+        </view>
+</view>
+<view class='endride'>
+<button type='warn' bindtap='endRide'>结束行程</button>
+<button type='primary' bindtap='backMap'>回到地图</button>
+</view>
+</view>

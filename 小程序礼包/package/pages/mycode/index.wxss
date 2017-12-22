@@ -1,0 +1,10 @@
+/* index.wxss */
+
+.package_ctn {
+  padding:0 20rpx;
+}
+.package_list_view .list_center .gray{color:#aaa }
+
+.package_list_view .list_center .ui_device text:last-child{
+  margin-left: 20rpx;
+}

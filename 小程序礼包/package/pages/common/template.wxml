@@ -1,0 +1,45 @@
+<template name="search">
+    <view class="search_box">
+        <view class="search_ipt">
+            <input name="input" placeholder="请输入礼包名称搜索！" value="{{keyword}}"  confirm-type="search" bindconfirm="searchTap" bindinput="bindinput"/>
+            <view class="close" wx:if="{{isShowColse}}" bindtap="clear"></view>
+        </view>
+    </view>
+</template>
+
+<template name="package_list">
+    <view class="package_list_view" wx:for="{{packageLists}}" wx:key="{{item.PackPlaceInfo.PackID}}">
+        <image src="{{item.PackPlaceInfo.ProducImageUrl}}" mode="scaleToFill"/>
+        <view class="list_center">
+            <text class="pack_name" selectable = "true">{{item.PackPlaceInfo.PackName}}</text>
+            <view class="ui_device">
+                <text class="gray">适用:</text>
+                <image class="ios" src="../../images/ios.svg" mode="scaleToFill" wx:if="{{item.PackPlaceInfo.PlatForm === '1,2' || item.PackPlaceInfo.PlatForm === '1' ? true : false}}"/>
+                <image class="adr" src="../../images/adr.svg" mode="scaleToFill" wx:if="{{item.PackPlaceInfo.PlatForm === '1,2' || item.PackPlaceInfo.PlatForm === '1' ? true : false}}"/>
+            </view>
+            <view>
+                <text class="gray">剩余：</text>
+                <text>{{item.RemainPercentageValue}}%</text>
+            </view>
+        </view>
+        <view class="{{item.PackStatusName=='可淘' ? 'ketao' : 'suling'}}" data-index="{{index}}" catchtap="receiveCode">{{item.PackStatusName}}</view>
+    </view>
+</template>
+
+<template name="mycode_list">
+    <view class="package_list_view" wx:for="{{packageLists}}" wx:key="{{item.Pid}}">
+        <image src="{{item.GameIcon}}" mode="scaleToFill"/>
+        <view class="list_center">
+            <text class="pack_name">{{item.PackName}}</text>
+            <view>
+                <text class="gray">到期时间：</text>
+                <text>{{item.Endtime}}</text>
+            </view>
+            <view class="ui_device">
+                <text class="gray">礼包码：</text>
+                <text selectable="true">{{item.PackCode}}</text>
+            </view>
+        </view>
+         <view class="suling" data-code="{{item.PackCode}}" bindtap="copy">复制</view>
+    </view>
+</template>

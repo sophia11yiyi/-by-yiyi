@@ -1,0 +1,56 @@
+
+
+<view class="package-detail">
+  <view class="top">
+    <text class="package-title">{{packageDetail.PackPlaceInfo.PackName}}</text>
+    <image src="{{packageDetail.PackPlaceInfo.ProducImageUrl}}" mode="scaleToFill" />
+    <view class="info">
+      <view class="info-left">
+        <text>剩余情况：</text>
+        <text class="per">{{packageDetail.RemainPercentageValue}}%</text>
+      </view>
+      <view class="info-right">
+        <text>适用:</text>
+        <image class="ios" src="../../images/ios.svg" mode="scaleToFill" wx:if="{{packageDetail.PackPlaceInfo.PlatForm === '1,2' || packageDetail.PackPlaceInfo.PlatForm === '1' ? true : false}}" />
+        <image class="adr" src="../../images/adr.svg" mode="scaleToFill" wx:if="{{packageDetail.PackPlaceInfo.PlatForm === '1,2' || packageDetail.PackPlaceInfo.PlatForm === '1' ? true : false}}" />
+      </view>
+    </view>
+  </view>
+
+  <view class="package-txt">
+    <text class="title">礼包内容</text>
+    <text class="gray">{{packageDetail.PackPlaceInfo.Description}}</text>
+  </view>
+
+  <view class="package-txt">
+    <text class="title">领取步骤</text>
+    <text class="gray" selectable="true">{{packageDetail.PackPlaceInfo.Rule}}</text>
+  </view>
+
+  <view class="package-btns">
+    <button class="ling" bindtap="tapHandle" data-url="GetPackCode">领取礼包</button>
+    <button class="tao" bindtap="tapHandle" data-url="WashPackCode">淘一个</button>
+  </view>
+
+  <view class="code-popup" wx:if="{{codes.length > 0}}">
+    <view class="code-mask" bindtap="hidePopup"></view>
+    <view class="code-wrapper">
+      <view class="code-title {{codes.length > 1?'code-tao':'code-ling'}}">{{codes.length > 1? '淘号成功' : '领取成功'}}</view>
+      <view class="code-list">
+          <view class="code-item" wx:for="{{codes}}" wx:key="{{item}}">
+              <text selectable="true">{{item}}</text>
+              <text data-index="{{index}}" bindtap="copy">复制</text>
+          </view>
+      </view>
+
+      <button bindtap="changeCode" class="change" wx:if="{{codes.length > 1}}">换一组</button>
+
+      <view class="tip">
+          <text>注：用微信公众号领取更方便</text>
+          <text>搜索微信号：</text><text class="red"  selectable="true">libaofabu</text><text>，选择</text><text class="red">“手游礼包大全”</text><text>认证账号，添加关注。回复游戏名领取对应礼包。</text><text class="red"  selectable="true">客服QQ：2945686707</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+<button hover-class="none" class="share" open-type="share" wx:if="{{canIUse}}"></button>

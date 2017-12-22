@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/setting/setting",
+    "pages/setting/device/device",
+    "pages/welcome/welcome",
+    "pages/movies/movie",
+    "pages/movies/movie-detail/movie-detail",
+    "pages/movies/more-movie/more-movie",
+    "pages/posts/post1/post",
+    "pages/posts/post",
+    "pages/logs/logs",
+    "pages/posts/post-detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTitleText": "12月，你好",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#111",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/posts/post",
+        "text": "列表",
+        "iconPath": "/images/tab/ciwei.png",
+        "selectedIconPath": "/images/tab/ciwei_hl.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "/images/tab/dianying.png",
+        "selectedIconPath": "/images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/movies/movie",
+        "text": "电影",
+        "iconPath": "/images/tab/ciwei.png",
+        "selectedIconPath": "/images/tab/ciwei_hl.png"
+      }
+    ]
+  }
+}
